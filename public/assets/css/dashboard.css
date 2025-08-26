@@ -1,0 +1,294 @@
+/* app/assets/css/dashboard.css */
+/* This file contains styles for the admin and user dashboards. */
+/* It uses the same variables from theme.css for consistency. */
+
+:root {
+    --sidebar-width: 260px;
+    --header-height: 70px;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+.dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--panel);
+    border-right: 1px solid rgba(255, 255, 255, 0.07);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    z-index: 1100;
+}
+
+.sidebar-header {
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    flex-shrink: 0; /* Prevent header from shrinking */
+}
+
+/* Styles for .logo-container and .logo-img are now centralized in theme.css */
+
+.sidebar-header .title {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.sidebar-nav {
+    flex-grow: 1;
+    overflow-y: auto; /* Make this area scrollable */
+    padding: 24px;
+}
+
+/* Custom Scrollbar Styling */
+.sidebar-nav::-webkit-scrollbar {
+    width: 6px;
+}
+.sidebar-nav::-webkit-scrollbar-track {
+    background: transparent;
+}
+.sidebar-nav::-webkit-scrollbar-thumb {
+    background-color: var(--gold);
+    border-radius: 10px;
+}
+
+.sidebar-nav .nav-title {
+    font-size: 0.8rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 16px 0 8px;
+    font-weight: 600;
+}
+
+.sidebar-nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 12px 16px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: var(--transition);
+    margin-bottom: 4px;
+}
+
+.sidebar-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text);
+}
+
+.sidebar-nav a.active {
+    background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(25, 140, 255, 0.2);
+}
+
+.sidebar-nav a i {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.sidebar-footer {
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: var(--sidebar-width);
+    width: calc(100% - var(--sidebar-width));
+    padding: var(--header-height) 0 0;
+    transition: all 0.3s ease;
+}
+
+.main-header {
+    height: var(--header-height);
+    background: rgba(15, 27, 55, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: var(--sidebar-width);
+    z-index: 1050;
+    transition: all 0.3s ease;
+}
+
+.header-left .menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--muted);
+    margin-right: 16px;
+}
+
+.header-left .page-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.user-profile img {
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    border: 2px solid var(--gold);
+}
+
+.user-profile .user-info {
+    text-align: right;
+}
+
+.user-profile .user-name {
+    font-weight: 600;
+}
+
+.user-profile .user-role {
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.content-wrapper {
+    padding: 32px;
+}
+
+/* Dashboard Components */
+.dash-card {
+    background-color: var(--panel);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--shadow);
+}
+
+.dash-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.dash-card-header h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.dash-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.dash-table th, .dash-table td {
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.dash-table thead th {
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.dash-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.dash-table .status {
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.status-approved { background-color: rgba(66, 211, 146, 0.1); color: var(--success); }
+.status-pending { background-color: rgba(214, 183, 91, 0.1); color: var(--gold); }
+.status-rejected { background-color: rgba(255, 90, 122, 0.1); color: var(--danger); }
+
+/* Form Styles */
+.dash-form .form-group {
+    margin-bottom: 20px;
+}
+
+.dash-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--muted);
+}
+
+.dash-form .form-control {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: var(--panel-2);
+    color: var(--text);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.dash-form .form-control:focus {
+    outline: none;
+    border-color: var(--accent-1);
+    box-shadow: 0 0 0 3px rgba(25, 140, 255, 0.2);
+}
+
+/* Responsive Dashboard */
+@media (max-width: 1024px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+    .sidebar.open {
+        transform: translateX(0);
+    }
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+    .main-header {
+        left: 0;
+    }
+    .header-left .menu-toggle {
+        display: block;
+    }
+}

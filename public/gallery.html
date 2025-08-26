@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Royal Ambassadors Portal</title>
+
+    <!-- Google Fonts & Remix Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Premium Theme CSS -->
+    <link rel="stylesheet" href="../assets/css/theme.css">
+
+    <style>
+        .page-header {
+            padding-top: 120px;
+            padding-bottom: 60px;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(15, 27, 55, 0.5), transparent);
+        }
+        .page-header h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--text), var(--accent-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .page-header p {
+            font-size: 1.1rem;
+            color: var(--muted);
+            max-width: 600px;
+            margin: 16px auto 0;
+        }
+        .content-section {
+            padding: 80px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .gallery-item {
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,.07);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+        .gallery-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(0,0,0,.4);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        .gallery-item .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(10,18,36,1), rgba(10,18,36,0.7) 70%, transparent);
+        }
+        .gallery-item .caption h4 {
+            font-weight: 700;
+            color: var(--text);
+        }
+        .gallery-item .caption p {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="nav-header">
+        <div class="nav-container">
+            <div class="brand">
+                <div class="logo-container">
+                    <img src="../assets/images/logo.png" alt="Logo" class="logo-img">
+                </div>
+                <div class="title">Royal Ambassadors</div>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html#features">Features</a>
+                <a href="about.html">About</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="login.html" class="btn btn-secondary">Login</a>
+                <a href="register.html" class="btn btn-primary">Join Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>Our Gallery</h1>
+        <p>A glimpse into our events, camps, and community activities.</p>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="content-section">
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="../assets/images/new_1.jpg" alt="Gallery Image 1">
+                <div class="caption">
+                    <h4>Annual Camp Meeting</h4>
+                    <p>Faith, fellowship, and fun under the stars.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="../assets/images/new_2.jpg" alt="Gallery Image 2">
+                <div class="caption">
+                    <h4>Leadership Training</h4>
+                    <p>Equipping the next generation of leaders.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="../assets/images/new_3.jpg" alt="Gallery Image 3">
+                <div class="caption">
+                    <h4>Community Outreach</h4>
+                    <p>Serving the community with love and compassion.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="../assets/images/new_4.jpg" alt="Gallery Image 4">
+                <div class="caption">
+                    <h4>Sports Festival</h4>
+                    <p>Building teamwork and sportsmanship.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="../assets/images/new_5.jpg" alt="Gallery Image 5">
+                <div class="caption">
+                    <h4>Bible Study Session</h4>
+                    <p>Diving deep into the Word of God.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="../assets/images/new_6.jpg" alt="Gallery Image 6">
+                <div class="caption">
+                    <h4>Music and Worship</h4>
+                    <p>Lifting our voices in praise.</p>
+                </div>
+            </div>
+             <div class="gallery-item">
+                <img src="../assets/images/outresch.jpg" alt="Gallery Image 6">
+                <div class="caption">
+                    <h4>Music and Worship</h4>
+                    <p>Lifting our voices in praise.</p>
+                </div>
+            </div>
+             <div class="gallery-item">
+                <img src="../assets/images/pro.jpg" alt="Gallery Image 6">
+                <div class="caption">
+                    <h4>Music and Worship</h4>
+                    <p>Lifting our voices in praise.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Ad Placeholder -->
+    <section class="ad-placeholder">
+        <p>Advertisement</p>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: linear-gradient(180deg, #0b1530, #0b162f); border-top: 1px solid rgba(255,255,255,.06); padding: 40px 24px 20px;">
+        <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+            <div class="brand" style="justify-content: center; margin-bottom: 20px;">
+                <div class="logo-container">
+                    <img src="../assets/images/logo.png" alt="Logo" class="logo-img">
+                </div>
+                <div class="title">Royal Ambassadors - Ogun Baptist Conference</div>
+            </div>
+            <p style="color: var(--muted); margin-bottom: 20px;">
+                Empowering young Christian leaders across Ogun State through faith, education, and service.
+            </p>
+            <div style="border-top: 1px solid rgba(255,255,255,.06); padding-top: 20px; color: var(--muted); font-size: 0.9rem;">
+                <p>&copy; 2025 Royal Ambassadors Ogun Baptist Conference. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

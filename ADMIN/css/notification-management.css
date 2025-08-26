@@ -1,0 +1,12 @@
+@import url('../../../assets/css/tokens.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap');
+
+/* Common Dashboard Styles */
+body {
+    background-color: #f4f7fc;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    display: flex;
+}
+
+/* ... common styles ... */

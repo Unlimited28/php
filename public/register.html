@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Royal Ambassadors Portal</title>
+
+    <!-- Google Fonts & Remix Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Premium Theme CSS -->
+    <link rel="stylesheet" href="../assets/css/theme.css">
+
+    <style>
+        .auth-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 24px;
+        }
+        .auth-card {
+            background: var(--panel);
+            border: 1px solid rgba(255,255,255,.07);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 40px;
+            width: 100%;
+            max-width: 550px;
+            text-align: center;
+        }
+        .auth-card .brand {
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+        .auth-card h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .auth-card p {
+            color: var(--muted);
+            margin-bottom: 32px;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+        .form-group label {
+            display: block;
+            color: var(--muted);
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+        .form-control {
+            width: 100%;
+            padding: 14px 18px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,.1);
+            background-color: var(--panel-2);
+            color: var(--text);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-1);
+            box-shadow: 0 0 0 3px rgba(25,140,255,.2);
+        }
+        select.form-control {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23a8b2d1' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1em;
+        }
+        .btn-full {
+            width: 100%;
+            padding: 16px;
+            font-size: 1rem;
+        }
+        .auth-footer {
+            margin-top: 24px;
+            color: var(--muted);
+        }
+        .auth-footer a {
+            color: var(--accent-2);
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Auth Section -->
+    <section class="auth-section">
+        <div class="auth-card">
+            <div class="brand">
+                <div class="logo-container">
+                    <img src="../assets/images/logo.png" alt="Logo" style="height: 45px;">
+                </div>
+                <div class="title">Royal Ambassadors</div>
+            </div>
+            <h2>Create Your Account</h2>
+            <p>Join the digital portal and start your journey.</p>
+
+            <form action="../forms/register.php" method="POST">
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label for="role">Select Your Role</label>
+                        <select id="role" name="role" class="form-control" required>
+                            <option value="ambassador">Ambassador</option>
+                            <option value="president">Association President</option>
+                            <option value="super_admin">Super Admin</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width" id="passcodeField" style="display: none;">
+                        <label for="passcode">Passcode</label>
+                        <input type="text" id="passcode" name="passcode" class="form-control">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" name="fullname" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="church">Church</label>
+                        <input type="text" id="church" name="church" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" class="form-control" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="association">Association</label>
+                        <select id="association" name="association_id" class="form-control" required>
+                            <option value="">-- Select Association --</option>
+                            <option value="1">Agape Baptist Association</option>
+                            <option value="2">Abeokuta North West Baptist Association</option>
+                            <option value="3">Ketu Baptist Association</option>
+                            <option value="4">Irepodun Oke-Yewa Baptist Association</option>
+                            <option value="5">Zion Baptist Association</option>
+                            <option value="6">Abeokuta South Baptist Association</option>
+                            <option value="7">Ijebu North East Baptist Association</option>
+                            <option value="8">Great Grace Baptist Association</option>
+                            <option value="9">Abeokuta East Baptist Association</option>
+                            <option value="10">Upper Room Baptist Association</option>
+                            <option value="11">Ijebu North Baptist Association</option>
+                            <option value="12">Abeokuta North-East Baptist Association</option>
+                            <option value="13">Abeokuta West Baptist Association</option>
+                            <option value="14">Bethel Baptist Association</option>
+                            <option value="15">Ayetoro Baptist Association</option>
+                            <option value="16">Dominion Baptist Association</option>
+                            <option value="17">Iroyin Ayo Baptist Association</option>
+                            <option value="18">Ijebu Central Baptist Association</option>
+                            <option value="19">Rehoboth Baptist Association</option>
+                            <option value="20">Christlife Baptist Association</option>
+                            <option value="21">Ifeoluwa Baptist Association</option>
+                            <option value="22">Ijebu Progressive Baptist Association</option>
+                            <option value="23">Yewa Baptist Association</option>
+                            <option value="24">Ayooluwa Baptist Association</option>
+                            <option value="25">Macedonia Baptist Association</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="rank">Current Rank</label>
+                        <select id="rank" name="rank_id" class="form-control" required>
+                            <option value="">-- Select Rank --</option>
+                            <option value="1">Candidate</option>
+                            <option value="2">Assistant Intern</option>
+                            <option value="3">Intern</option>
+                            <option value="4">Senior Intern</option>
+                            <option value="5">Envoy</option>
+                            <option value="6">Senior Envoy</option>
+                            <option value="7">Special Envoy</option>
+                            <option value="8">Dean</option>
+                            <option value="9">Ambassador</option>
+                            <option value="10">Ambassador Extraordinary</option>
+                            <option value="11">Ambassador Plenipotentiary</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" class="form-control" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">
+                    <i class="ri-user-add-line"></i>
+                    Register Now
+                </button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+        </div>
+    </section>
+    <footer style="position: fixed; bottom: 0; width: 100%; background: var(--bg); text-align: center; padding: 10px 0; font-size: 0.9rem; color: var(--muted);">
+        <p>&copy; 2025 Royal Ambassadors Ogun Baptist Conference. All rights reserved.</p>
+    </footer>
+    <script src="../assets/js/public.js"></script>
+</body>
+</html>

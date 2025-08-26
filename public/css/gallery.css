@@ -1,0 +1,60 @@
+@import url('../../assets/css/tokens.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap');
+
+/* Common Public Page Styles */
+body {
+    background-color: var(--bg);
+    font-family: 'Open Sans', sans-serif;
+    color: var(--txt);
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--brand-navy);
+}
+
+/* Header */
+.public-header {
+    padding: var(--space-4) 0;
+    border-bottom: 1px solid #eee;
+}
+
+.public-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-wrap {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.logo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ... more common styles ... */
+
+/* Index Page Specific Styles */
+.hero-section {
+    background-color: var(--brand-navy);
+    color: var(--bg);
+    text-align: center;
+    padding: 6rem 1rem;
+}

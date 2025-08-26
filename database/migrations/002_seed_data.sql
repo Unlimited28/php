@@ -1,0 +1,41 @@
+-- Seed Associations (25 exact ones from PLD)
+INSERT INTO associations (name) VALUES
+('Agape Baptist Association'),
+('Abeokuta North West Baptist Association'),
+('Ketu Baptist Association'),
+('Irepodun Oke-Yewa Baptist Association'),
+('Zion Baptist Association'),
+('Abeokuta South Baptist Association'),
+('Ijebu North East Baptist Association'),
+('Great Grace Baptist Association'),
+('Abeokuta East Baptist Association'),
+('Upper Room Baptist Association'),
+('Ijebu North Baptist Association'),
+('Abeokuta North-East Baptist Association'),
+('Abeokuta West Baptist Association'),
+('Bethel Baptist Association'),
+('Ayetoro Baptist Association'),
+('Dominion Baptist Association'),
+('Iroyin Ayo Baptist Association'),
+('Ijebu Central Baptist Association'),
+('Rehoboth Baptist Association'),
+('Christlife Baptist Association'),
+('Ifeoluwa Baptist Association'),
+('Ijebu Progressive Baptist Association'),
+('Yewa Baptist Association'),
+('Ayooluwa Baptist Association'),
+('Macedonia Baptist Association');
+
+-- Seed Ranks (11 exact ones from PLD, in order)
+INSERT INTO ranks (name, level) VALUES
+('Candidate', 1),
+('Assistant Intern', 2),
+('Intern', 3),
+('Senior Intern', 4),
+('Envoy', 5),
+('Senior Envoy', 6),
+('Special Envoy', 7),
+('Dean', 8),
+('Ambassador', 9),
+('Ambassador Extraordinary', 10),
+('Ambassador Plenipotentiary', 11);
